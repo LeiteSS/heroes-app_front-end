@@ -1,0 +1,27 @@
+<div class="grid grid-cols-3 p-8 gap-7 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-1 xl:grid-cols-4">
+    <div class="transition-transform transform hover:scale-105 cursor-pointer duration-300 ease-in-out" *ngFor="let hero of heroes | async">
+        <div class="flex items-center justify-center">
+            <div class="rounded-xl shadow-xl">
+                <img class="w-full rounded-t-xl h-36 object-cover" width="400" height="400" src="{{hero.mainImageUrl}}">
+                <div class="flex flex-row">
+                    <div class="uppercase text-xs text-yellow-700 bg-yellow-200 px-2 py-1 rounded-xl">
+                        {{hero.universe}}
+                    </div>
+                </div>
+                <h2 class="text-2xl mt-2 font-bold">
+                    {{hero.name}}
+                </h2>
+                <p class="mt-2 text-gray-600">
+                    {{hero.story}}
+                </p>
+                <div class="flex flex-row mt-4 items-center">
+                    <img class="rounded-full mr-2" width="40" height="40" src="{{hero.authorImageUrl}}">
+                    <div class="font-bold mr-2">{{hero.authorName}}</div>
+                    <div class="text-gray-400">{{hero.city}}</div>
+                 </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
